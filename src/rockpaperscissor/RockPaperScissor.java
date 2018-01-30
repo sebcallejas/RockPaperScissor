@@ -65,7 +65,7 @@ public class RockPaperScissor {
         System.out.println("would you like to play again??");
         System.out.println("Y/N");
         String choice = scan.nextLine().toLowerCase();
-        if (choice == "y"){
+        if (choice.equals("y")){
             singlePlayer();
         }
         else {
