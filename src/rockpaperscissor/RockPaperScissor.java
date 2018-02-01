@@ -102,6 +102,32 @@ public class RockPaperScissor {
  
     public static void singlePlayer() {
         
+        //Player 1 Input:
+        System.out.println("Player 1:");
+        System.out.println("Rock Paper or Scissors?");
+        System.out.println("1. Rock");
+        System.out.println("2. Paper");
+        System.out.println("3. Scissors");
+            int choice = scan.nextInt();
+       //Player 2 Input 
+            
+        System.out.println("Player 2:");
+        System.out.println("Rock Paper or Scissors?");
+        System.out.println("1. Rock");
+        System.out.println("2. Paper");
+        System.out.println("3. Scissors");
+            int choice2 = scan.nextInt();
+        if (choice == choice2) {
+            System.out.println("It's a tie!!");
+
+        } else if (choice < choice2) {
+            System.out.println("Player 2 Wins!");
+        } else if (choice == 3 && choice2 == 1) {
+            System.out.println("Player 2 Wins!");
+        } else if (choice == 3 && choice2 == 2) {
+            System.out.println("Player 1 Wins!");
+        }
+        retry2();
     }
     
     public static void trashTalk() {     
@@ -132,6 +158,18 @@ public class RockPaperScissor {
         else {
             System.out.println("Goodbye!");
             System.exit(0);
+        }
+    }
+    public static void retry2() {
+        System.out.println("Would you like to play again??");
+        System.out.println("Y/N");
+        String choice = scan.next().toLowerCase();
+        System.out.println(choice);
+        if (choice.equals("y")){
+            singlePlayer();
+        }
+        else {
+           System.exit(0);
         }
     }
 }
